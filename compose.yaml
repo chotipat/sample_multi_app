@@ -1,0 +1,22 @@
+services:
+  web:
+    build: ./web
+    ports:
+      - "8080:8080"
+    networks:
+      - micro_app-net
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest
+    networks:
+      - micro_app-net
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
+
+networks:
+  micro_app-net:

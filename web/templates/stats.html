@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>IP Stats</title></head>
+<link rel="stylesheet" href="/static/style.css" />
+<body>
+  <h1>IP Access Statistics</h1>
+  <table border="1">
+    <tr><th>IP Address</th><th>Visit Count</th></tr>
+    {% for item in stats %}
+      <tr>
+        <td>{{ item._id }}</td>
+        <td>{{ item.count }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+  <p><a href="/">Back to home</a></p>
+</body>
+</html>
