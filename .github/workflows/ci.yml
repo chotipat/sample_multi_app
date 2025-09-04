@@ -27,5 +27,5 @@ jobs:
 
       - name: Build & Push Docker Images
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/web:v1.0.0 ./web
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/web:v1.0.0
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/sample_multi_app_web:v1.0.0 ./web
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/sample_multi_app_web:v1.0.0
